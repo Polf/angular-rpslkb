@@ -10,17 +10,23 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import { AsyncPromisePipeComponent } from './test/async-promise-pipe';
+import { CommonModule } from '@angular/common';
+import { AsyncObservablePipeComponent } from './test/async-observable-pipe';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CommonModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'async', component: AsyncPromisePipeComponent },
+      { path: 'observable', component: AsyncObservablePipeComponent },
     ]),
   ],
   declarations: [
@@ -30,6 +36,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    AsyncPromisePipeComponent,
+    AsyncObservablePipeComponent,
   ],
   bootstrap: [AppComponent],
 })
