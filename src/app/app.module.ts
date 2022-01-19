@@ -13,6 +13,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { AsyncPromisePipeComponent } from './test/async-promise-pipe';
 import { CommonModule } from '@angular/common';
 import { AsyncObservablePipeComponent } from './test/async-observable-pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { AsyncObservablePipeComponent } from './test/async-observable-pipe';
     ShippingComponent,
     AsyncPromisePipeComponent,
     AsyncObservablePipeComponent,
+    HighlightDirective,
   ],
   bootstrap: [AppComponent],
 })
